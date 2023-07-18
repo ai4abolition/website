@@ -1,13 +1,13 @@
 import { Container, Nav, Navbar, Stack } from "react-bootstrap";
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="/">AI4Abolition</Navbar.Brand>
+          <Navbar.Brand href="/">AI 4 Abolition</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
