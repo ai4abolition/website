@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 export const About = () => {
   return (
     <div className="About-container">
@@ -48,7 +50,7 @@ export const About = () => {
           learning, fostering an inclusive culture, and using our skills to make
           a positive impact.
         </p>
-        <button>Meet Our Team</button>
+        <Button>Meet Our Team</Button>
       </section>
       <section className="About-section">
         <h5>Our Community</h5>
@@ -58,7 +60,7 @@ export const About = () => {
           AI. Together, we are working to build a future where everyone can
           thrive.
         </p>
-        <button>Join Our Community</button>
+        <Button>Join Our Community</Button>
       </section>
       <section className="About-section">
         <h5>Our Advisory Board</h5>
@@ -68,7 +70,7 @@ export const About = () => {
           refining our strategy to align with the evolving needs of the
           communities we serve.
         </p>
-        <button>Meet Our Advisory Board</button>
+        <Button>Meet Our Advisory Board</Button>
       </section>
     </div>
   );

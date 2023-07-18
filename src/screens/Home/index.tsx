@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 export const Home = () => {
   return (
     <div className="Home-container">
@@ -21,7 +23,7 @@ export const Home = () => {
           solutions that promote justice, mitigate bias, and empower the
           community.
         </p>
-        <button>Learn More</button>
+        <Button>Learn More</Button>
       </section>
       <section className="Home-section">
         <h5>Our Services</h5>
@@ -30,7 +32,7 @@ export const Home = () => {
           offer a wide range of services, including AI consulting, education,
           and software development, always with an abolitionist lens.
         </p>
-        <button>Explore Our Services</button>
+        <Button>Explore Our Services</Button>
       </section>
       <section className="Home-section">
         <h5>Join the Movement</h5>
@@ -40,7 +42,7 @@ export const Home = () => {
           you're becoming a part of a vibrant community that believes in the
           power of technology to transform society.
         </p>
-        <button>Join Us</button>
+        <Button>Join Us</Button>
       </section>
       <section className="Home-section">
         <h5>Resources</h5>
@@ -49,12 +51,12 @@ export const Home = () => {
           resources designed to educate and empower. Learn more about AI, the
           abolitionist movement, and how they intersect.
         </p>
-        <button>Explore Resources</button>
+        <Button>Explore Resources</Button>
       </section>
       <section className="Home-section">
         <h5>Testimonials</h5>
         <p></p>
-        <button>Read More Stories</button>
+        <Button>Read More Stories</Button>
       </section>
       <section className="Home-section">
         <h5>Support Our Work</h5>
@@ -62,7 +64,7 @@ export const Home = () => {
           Your support helps us continue our mission to leverage AI for social
           good. Join us in making a meaningful difference in the world.
         </p>
-        <button>Donate Now</button>
+        <Button>Donate Now</Button>
       </section>
     </div>
   );
