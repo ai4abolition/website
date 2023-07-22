@@ -1,9 +1,10 @@
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 export const Home = () => {
   return (
-    <div className="Home-container">
-      <section className="Home-jumbotron">
+    <Container className="Home-container pt-5 d-flex-column">
+      <section className="Home-jumbotron py-5 w-75 text-start">
+        <div className="py-5 my-5" />
         <h1 className="Home-header">
           AI4Abolition: Leveraging Technology for Liberation
         </h1>
@@ -13,7 +14,7 @@ export const Home = () => {
           equality.
         </h4>
       </section>
-      <section className="Home-section">
+      <section className="py-5">
         <h5>Our Mission</h5>
         <p>
           AI4Abolition envisions a world where artificial intelligence (AI) is
@@ -25,7 +26,7 @@ export const Home = () => {
         </p>
         <Button>Learn More</Button>
       </section>
-      <section className="Home-section">
+      <section className="py-5">
         <h5>Our Services</h5>
         <p>
           As pioneers at the intersection of technology and social justice, we
@@ -34,7 +35,7 @@ export const Home = () => {
         </p>
         <Button>Explore Our Services</Button>
       </section>
-      <section className="Home-section">
+      <section className="py-5">
         <h5>Join the Movement</h5>
         <p>
           Be part of a collective effort to shape the future of AI in a way that
@@ -44,7 +45,7 @@ export const Home = () => {
         </p>
         <Button>Join Us</Button>
       </section>
-      <section className="Home-section">
+      <section className="py-5">
         <h5>Resources</h5>
         <p>
           We believe knowledge is power. Explore our comprehensive repository of
@@ -53,12 +54,12 @@ export const Home = () => {
         </p>
         <Button>Explore Resources</Button>
       </section>
-      <section className="Home-section">
+      <section className="py-5">
         <h5>Testimonials</h5>
         <p></p>
         <Button>Read More Stories</Button>
       </section>
-      <section className="Home-section">
+      <section className="py-5">
         <h5>Support Our Work</h5>
         <p>
           Your support helps us continue our mission to leverage AI for social
@@ -66,6 +67,6 @@ export const Home = () => {
         </p>
         <Button>Donate Now</Button>
       </section>
-    </div>
+    </Container>
   );
 };

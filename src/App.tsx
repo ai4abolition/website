@@ -1,13 +1,16 @@
-import { Container, Nav, Navbar, Stack } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar expand="lg" className="bg-body-tertiary">
+    <div className="App bg-info bg-gradient">
+      <Navbar expand="lg" className="my-3 bg-transparent">
         <Container>
-          <Navbar.Brand href="/">AI 4 Abolition</Navbar.Brand>
+          <Navbar.Brand className="fs-4" href="/">
+            AI 4 Abolition
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
@@ -22,22 +25,7 @@ function App() {
       <div className="App-body">
         <Outlet />
       </div>
-      <footer className="App-footer">
-        <Container>
-          <Stack direction="horizontal">
-            <h6>
-              AI4Abolition: Empowering Communities. Building an Inclusive
-              Future.
-            </h6>
-            <Nav defaultActiveKey="/" className="flex-column">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about" eventKey="link-1">
-                About
-              </Nav.Link>
-            </Nav>
-          </Stack>
-        </Container>
-      </footer>
+      <Footer />
     </div>
   );
 }
