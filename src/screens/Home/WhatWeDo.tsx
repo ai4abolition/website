@@ -1,3 +1,8 @@
+import Fist from "../../icons/fist.svg"
+import Scale from "../../icons/scale.svg"
+import People from "../../icons/people.svg"
+import Lightbulb from "../../icons/lightbulb.svg"
+
 type ImageProps = {
   src: string
   alt?: string
@@ -67,37 +72,25 @@ export const WhatWeDo = (props: Layout245Props) => {
 export const Layout245Defaults: Layout245Props = {
   sections: [
     {
-      icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-        alt: "Relume logo 1",
-      },
+      icon: { src: Fist, alt: "Fist Icon" },
       heading: "Practicing Abolition",
       description:
         "We are a dedicated team of technologists, researchers, and advocates, innovating at the crossroads of artificial  intelligence and social transformation. Our goal is to harness AI's  potential to challenge systemic inequalities and instigate  transformative justice.",
     },
     {
-      icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-        alt: "Relume logo 2",
-      },
+      icon: { src: Scale, alt: "Scale Icon" },
       heading: "Solving Systemic Biases",
       description:
         "The landscape of data science is plagued with systemic  biases, perpetuating disparities and enabling unjust decision making. Our resolve is to construct and deploy tools capable of identifying, challenging, and rectifying these harms while imagining new uses and development practices for AI for a more equitable future.",
     },
     {
-      icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-        alt: "Relume logo 3",
-      },
+      icon: { src: People, alt: "People Icon" },
       heading: "Impacting the AI Community",
       description:
         "Our mission has made significant waves in the field of AI. Through our incisive research and advocacy, we have already drawn attention to the pervasive algorithmic bias in systems like social media recommendations, music streaming and human-algorithm interaction loops, initiating crucial conversations on the subject.",
     },
     {
-      icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-        alt: "Relume logo 3",
-      },
+      icon: { src: Lightbulb, alt: "Lightbulb Icon" },
       heading: "Innovating for Change",
       description:
         "Our contributions have been recognized by distinguished institutions and industry leaders alike. We have proven our capacity for transformative innovation. Our collaborations, including research and advocacy with Spotify Tech Research, The US Courts, and TikTok (to name a few) place us at the forefront of the discourse on tech equity.",

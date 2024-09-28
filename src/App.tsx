@@ -1,11 +1,10 @@
 import { Navbar } from "./components/NavBar"
 import Logo from "./assets/condensed-logo.svg"
-import { Header17 } from "./components/Hero"
-import { WhatWeDo } from "./components/WhatWeDo"
+import { Home } from "./screens/Home"
 
 export const App = () => {
   return (
-    <>
+    <div className="bg-timberwolf-100">
       <Navbar
         navLinks={[
           { title: "Explore", url: "/" },
@@ -15,8 +14,7 @@ export const App = () => {
         buttons={[{ title: "Donate" }]}
         logo={{ src: Logo }}
       />
-      <Header17 />
-      <WhatWeDo />
-    </>
+      <Home />
+    </div>
   )
 }

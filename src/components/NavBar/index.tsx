@@ -36,7 +36,7 @@ export const Navbar = (props: Navbar3Props) => {
   const isMobile = useMediaQuery("(max-width: 991px)")
 
   return (
-    <nav className="grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between bg-background-primary px-[5%] md:min-h-18">
+    <nav className="grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between px-[5%] md:min-h-18">
       <button
         className="flex size-12 flex-col justify-center lg:hidden"
         onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -71,7 +71,7 @@ export const Navbar = (props: Navbar3Props) => {
               transition: { type: "spring", duration: 0.4, bounce: 0 },
             },
           }}
-          className="absolute left-0 top-0 z-50 flex h-dvh w-[90%] flex-col border-r border-border-primary bg-white px-[5%] pb-4 md:w-[80%] lg:visible lg:static lg:-ml-4 lg:flex lg:h-auto lg:w-auto lg:flex-row lg:border-none lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
+          className="absolute left-0 top-0 z-50 flex h-dvh w-[90%] flex-col border-r border-border-primary  px-[5%] pb-4 md:w-[80%] lg:visible lg:static lg:-ml-4 lg:flex lg:h-auto lg:w-auto lg:flex-row lg:border-none lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
         >
           <a
             href={logo.url}
@@ -80,7 +80,7 @@ export const Navbar = (props: Navbar3Props) => {
             <img src={logo.src} alt={logo.alt} />
           </a>
           {navLinks.map((navLink, index) => (
-            <div key={index} className="w-full lg:w-auto">
+            <div key={index} className="w-full lg:w-auto ">
               {navLink.subMenuLinks && navLink.subMenuLinks.length > 0 ? (
                 <SubMenu navLink={navLink} isMobile={isMobile} />
               ) : (
@@ -182,7 +182,7 @@ const SubMenu = ({
             initial="close"
             exit="close"
             animate={isDropdownOpen ? "open" : "close"}
-            className="bg-background-primary lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
+            className="lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
           >
             {navLink.subMenuLinks?.map((subMenuLink, index) => (
               <a
@@ -200,7 +200,7 @@ const SubMenu = ({
   )
 }
 
-export const Navbar3Defaults: Navbar3Props = {
+const Navbar3Defaults: Navbar3Props = {
   logo: {
     url: "#",
     src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
