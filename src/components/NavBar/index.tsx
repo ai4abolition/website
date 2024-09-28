@@ -1,16 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Button, useMediaQuery } from "@relume_io/relume-ui"
+import { Button } from "@relume_io/relume-ui"
 import type { ButtonProps } from "@relume_io/relume-ui"
 import { AnimatePresence, motion } from "framer-motion"
-import { RxChevronDown } from "react-icons/rx"
-
-type ImageProps = {
-  url?: string
-  src: string
-  alt?: string
-}
+import Logo from "../../assets/condensed-logo.svg"
+import { Link, NavLink } from "react-router-dom"
 
 type NavLink = {
   url: string
@@ -19,7 +14,6 @@ type NavLink = {
 }
 
 type Props = {
-  logo: ImageProps
   navLinks: NavLink[]
   buttons: ButtonProps[]
 }
@@ -28,12 +22,11 @@ export type Navbar3Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>
 
 export const Navbar = (props: Navbar3Props) => {
-  const { logo, navLinks, buttons } = {
+  const { navLinks, buttons } = {
     ...Navbar3Defaults,
     ...props,
   } as Props
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const isMobile = useMediaQuery("(max-width: 991px)")
 
   return (
     <nav className="grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between px-[5%] md:min-h-18">
@@ -71,26 +64,26 @@ export const Navbar = (props: Navbar3Props) => {
               transition: { type: "spring", duration: 0.4, bounce: 0 },
             },
           }}
-          className="absolute left-0 top-0 z-50 flex h-dvh w-[90%] flex-col border-r border-border-primary  px-[5%] pb-4 md:w-[80%] lg:visible lg:static lg:-ml-4 lg:flex lg:h-auto lg:w-auto lg:flex-row lg:border-none lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
+          className="absolute left-0 top-0 z-50 flex h-dvh w-[90%] flex-col border-r border-border-primary bg-white md:bg-inherit px-[5%] pb-4 md:w-[80%] lg:visible lg:static lg:-ml-4 lg:flex lg:h-auto lg:w-auto lg:flex-row lg:border-none lg:px-0 lg:pb-0 lg:[--opacity-closed:100%] lg:[--x-closed:0%]"
         >
-          <a
-            href={logo.url}
+          <Link
+            onClick={() => setIsMobileMenuOpen(false)}
+            to="/"
             className="mb-8 mt-10 flex flex-shrink-0 lg:hidden"
           >
-            <img src={logo.src} alt={logo.alt} />
-          </a>
+            <img src={Logo} alt="Logo image" />
+          </Link>
           {navLinks.map((navLink, index) => (
             <div key={index} className="w-full lg:w-auto ">
-              {navLink.subMenuLinks && navLink.subMenuLinks.length > 0 ? (
-                <SubMenu navLink={navLink} isMobile={isMobile} />
-              ) : (
-                <a
-                  href={navLink.url}
-                  className="relative block py-3 text-md lg:px-4 lg:py-2 lg:text-base"
-                >
-                  {navLink.title}
-                </a>
-              )}
+              <NavLink
+                onClick={() => setIsMobileMenuOpen(false)}
+                to={navLink.url}
+                className={({ isActive }) =>
+                  `relative block py-3 text-md lg:px-4 lg:py-2 lg:text-base  ${isActive ? "font-semibold" : "text-black-olive-300"}`
+                }
+              >
+                {navLink.title}
+              </NavLink>
             </div>
           ))}
           <div className="mt-6 lg:hidden">
@@ -112,100 +105,19 @@ export const Navbar = (props: Navbar3Props) => {
           />
         )}
       </AnimatePresence>
-      <a href={logo.url} className="flex min-h-16 flex-shrink-0 items-center">
-        <img src={logo.src} alt={logo.alt} />
-      </a>
+      <Link to="/" className="flex min-h-16 flex-shrink-0 items-center">
+        <img src={Logo} alt="Logo image" />
+      </Link>
       <div className="flex min-h-16 items-center justify-end gap-x-4">
         <div>
-          {buttons.map((button, index) => (
-            <Button
-              key={index}
-              {...button}
-              className="px-4 py-1 md:px-6 md:py-2 rounded"
-            >
-              {button.title}
-            </Button>
-          ))}
+          <Button className="px-4 py-1 md:px-6 md:py-2 rounded">Donate</Button>
         </div>
       </div>
     </nav>
   )
 }
 
-const SubMenu = ({
-  navLink,
-  isMobile,
-}: {
-  navLink: NavLink
-  isMobile: boolean
-}) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-
-  return (
-    <div
-      onMouseEnter={() => !isMobile && setIsDropdownOpen(true)}
-      onMouseLeave={() => !isMobile && setIsDropdownOpen(false)}
-    >
-      <button
-        className="flex w-full items-center justify-between gap-2 py-3 text-md lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
-        onClick={() => setIsDropdownOpen((prev) => !prev)}
-      >
-        <span>{navLink.title}</span>
-        <AnimatePresence>
-          <motion.span
-            animate={isDropdownOpen ? "rotated" : "initial"}
-            variants={{
-              rotated: { rotate: 180 },
-              initial: { rotate: 0 },
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            <RxChevronDown />
-          </motion.span>
-        </AnimatePresence>
-      </button>
-      {isDropdownOpen && (
-        <AnimatePresence>
-          <motion.nav
-            variants={{
-              open: {
-                visibility: "visible",
-                opacity: "var(--opacity-open, 100%)",
-                y: 0,
-              },
-              close: {
-                visibility: "hidden",
-                opacity: "var(--opacity-close, 0)",
-                y: "var(--y-close, 0%)",
-              },
-            }}
-            initial="close"
-            exit="close"
-            animate={isDropdownOpen ? "open" : "close"}
-            className="lg:absolute lg:z-50 lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
-          >
-            {navLink.subMenuLinks?.map((subMenuLink, index) => (
-              <a
-                key={index}
-                href={subMenuLink.url}
-                className="block py-3 pl-[5%] text-md lg:py-2 lg:pl-4 lg:pr-8 lg:text-left lg:text-base"
-              >
-                {subMenuLink.title}
-              </a>
-            ))}
-          </motion.nav>
-        </AnimatePresence>
-      )}
-    </div>
-  )
-}
-
 const Navbar3Defaults: Navbar3Props = {
-  logo: {
-    url: "#",
-    src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
-    alt: "Logo image",
-  },
   navLinks: [
     { title: "Link One", url: "#" },
     { title: "Link Two", url: "#" },
