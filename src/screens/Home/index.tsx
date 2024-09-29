@@ -35,8 +35,8 @@ export const Home = () => {
             className="w-full object-cover"
             alt="Hero Image"
           />
-          <div className="bg-timberwolf-100 absolute bottom-0 left-0 max-w-[1035px] rounded-tr-[35px] pl-[24px] pb-[32px] pr-[50px] pt-[59px]">
-            <h2 className="font-serif text-9xl font-semibold">
+          <div className="bg-timberwolf-100 absolute bottom-0 left-0 w-2/3 rounded-tr-[35px] p-4 lg:pl-[24px] lg:pb-[32px] lg:pr-[50px] lg:pt-[59px]">
+            <h2 className="font-serif xl:text-9xl lg:text-4xl sm:text-md md:text-lg font-semibold">
               {en.home.hero.imageText}
             </h2>
           </div>
