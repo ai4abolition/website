@@ -9,7 +9,6 @@ import { OurMission } from "./OurMission"
 import { WhatWeDo } from "./WhatWeDo"
 import { OurWhy } from "./OurWhy"
 import { Solutions } from "./Solutions"
-import clsx from "clsx"
 
 export const Home = () => {
   return (
@@ -56,16 +55,17 @@ export const Home = () => {
               initial={{ x: "-50%" }}
               animate={{ x: "0%" }}
               transition={{ type: "spring", bounce: 0 }}
-              className={clsx(
-                "text-6xl font-semibold md:text-9xl lg:text-10xl font-serif",
-                {
-                  "mb-5 md:mb-6": 0 !== 0,
-                },
-              )}
+              className="font-serif text-6xl font-semibold md:text-9xl lg:text-10xl"
             >
               Join us in co-creating the
-              <br />
-              <span className="italic font-light">future of justice.</span>
+            </motion.h1>
+            <motion.h1
+              initial={{ x: "50%" }}
+              animate={{ x: "0%" }}
+              transition={{ type: "spring", bounce: 0 }}
+              className="font-serif text-6xl italic font-light md:text-9xl lg:text-10xl mb-5 md:mb-6"
+            >
+              future of justice.
             </motion.h1>
             <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
               <Button className="rounded">Donate</Button>
