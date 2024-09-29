@@ -2,30 +2,30 @@
 
 import { useState } from "react"
 import { Button } from "@relume_io/relume-ui"
-import type { ButtonProps } from "@relume_io/relume-ui"
+
 import { AnimatePresence, motion } from "framer-motion"
 import Logo from "../../assets/condensed-logo.svg"
 import { Link, NavLink } from "react-router-dom"
 
-type NavLink = {
-  url: string
-  title: string
-  subMenuLinks?: NavLink[]
-}
+const navLinks = [
+  {
+    key: "home",
+    url: "/",
+    label: "Explore",
+  },
+  {
+    key: "about",
+    url: "about",
+    label: "About",
+  },
+  {
+    key: "resources",
+    url: "resources",
+    label: "Resources",
+  },
+]
 
-type Props = {
-  navLinks: NavLink[]
-  buttons: ButtonProps[]
-}
-
-export type Navbar3Props = React.ComponentPropsWithoutRef<"section"> &
-  Partial<Props>
-
-export const Navbar = (props: Navbar3Props) => {
-  const { navLinks, buttons } = {
-    ...Navbar3Defaults,
-    ...props,
-  } as Props
+export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
@@ -73,8 +73,8 @@ export const Navbar = (props: Navbar3Props) => {
           >
             <img src={Logo} alt="Logo image" />
           </Link>
-          {navLinks.map((navLink, index) => (
-            <div key={index} className="w-full lg:w-auto ">
+          {navLinks.map((navLink) => (
+            <div key={navLink.key} className="w-full lg:w-auto ">
               <NavLink
                 onClick={() => setIsMobileMenuOpen(false)}
                 to={navLink.url}
@@ -82,16 +82,12 @@ export const Navbar = (props: Navbar3Props) => {
                   `relative block py-3 text-md lg:px-4 lg:py-2 lg:text-base  ${isActive ? "font-semibold" : "text-black-olive-300"}`
                 }
               >
-                {navLink.title}
+                {navLink.label}
               </NavLink>
             </div>
           ))}
           <div className="mt-6 lg:hidden">
-            {buttons.map((button, index) => (
-              <Button key={index} {...button} className="w-full">
-                {button.title}
-              </Button>
-            ))}
+            <Button className="w-full">Donate</Button>
           </div>
         </motion.div>
         {isMobileMenuOpen && (
@@ -115,26 +111,4 @@ export const Navbar = (props: Navbar3Props) => {
       </div>
     </nav>
   )
-}
-
-const Navbar3Defaults: Navbar3Props = {
-  navLinks: [
-    { title: "Link One", url: "#" },
-    { title: "Link Two", url: "#" },
-    {
-      title: "Link Three",
-      url: "#",
-      subMenuLinks: [
-        { title: "Link Four", url: "#" },
-        { title: "Link Five", url: "#" },
-        { title: "Link Six", url: "#" },
-      ],
-    },
-  ],
-  buttons: [
-    {
-      title: "Button",
-      size: "sm",
-    },
-  ],
 }

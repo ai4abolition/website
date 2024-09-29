@@ -1,0 +1,63 @@
+{
+  "home": {
+    "hero": {
+      "description": "We are a nonprofit organization promoting AI literacy and developing open source tools for a just and regenerative future. We center the experiences of Black and Indigenous women, queer, and youth leaders.",
+      "imageText": "Building collective power with and around artificial intelligence."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "subtitle": "Harnessing Artificial Intelligence for Transformative Justice",
+      "description": "AI4Abolition empowers communities, organizations, and individuals with the knowledge and tools necessary to harness artificial intelligence for transformative justice. Our commitment is to create an abolitionist future by promoting AI literacy and developing tech products, literature, and cutting edge research. We prioritize serving Black and Indigenous women, queer, and youth leaders, but our mission embraces all who strive to use AI as a force for systemic repair and mutual aid.",
+      "sections": [
+        {
+          "key": "practicing-abolition",
+          "title": "Practicing Abolition",
+          "description": "We are a dedicated team of technologists, researchers, and advocates, innovating at the crossroads of artificial  intelligence and social transformation. Our goal is to harness AI's  potential to challenge systemic inequalities and instigate transformative justice."
+        },
+        {
+          "key": "solving-systemic-biases",
+          "title": "Solving Systemic Biases",
+          "description": "The landscape of data science is plagued with systemic  biases, perpetuating disparities and enabling unjust decision making. Our resolve is to construct and deploy tools capable of identifying, challenging, and rectifying these harms while imagining new uses and development practices for AI for a more equitable future."
+        },
+        {
+          "key": "impacting-the-ai-community",
+          "title": "Impacting the AI Community",
+          "description": "Our mission has made significant waves in the field of AI. Through our incisive research and advocacy, we have already drawn attention to the pervasive algorithmic bias in systems like social media recommendations, music streaming and human-algorithm interaction loops, initiating crucial conversations on the subject."
+        },
+        {
+          "key": "innovating-for-change",
+          "title": "Innovating for Change",
+          "description": "Our contributions have been recognized by distinguished institutions and industry leaders alike. We have proven our capacity for transformative innovation. Our collaborations, including research and advocacy with Spotify Tech Research, The US Courts, and TikTok (to name a few) place us at the forefront of the discourse on tech equity."
+        }
+      ]
+    },
+    "ourMission": {
+      "title": "Our Mission",
+      "body": "We are committed to creating an abolitionist future by promoting AI literacy and developing open-source community-led products to usher in a just and regenerative future."
+    },
+    "ourWhy": {
+      "title": "Why we do what we do",
+      "body": "Together, we must make <span className=\"italic font-light\">artificial intelligence</span> work for <span className=\"italic font-light\">justice</span>, not against it.",
+      "caption": "AI can be a tool for liberation, not oppression, helping to create a just society.",
+      "sections": [
+        {
+          "title": "The Power of AI",
+          "description": "Artificial Intelligence has reshaped countless aspects of our  lives, from healthcare to transportation to entertainment. Its ability to parse vast amounts of data makes AI a transformative tool, capable of streamlining processes and offering insights beyond human capabilities."
+        },
+        {
+          "title": "The Current Landscape",
+          "description": "Unfortunately, AI's vast potential has not been fully leveraged toward social justice. Indeed, quite the opposite  has happened. Existing systems mirror societal biases, resulting in skewed, sometimes life-threatening outcomes. These biases further marginalize communities already facing systemic disadvantages."
+        },
+        {
+          "title": "The Need for AI in Abolition",
+          "description": "AI can be a powerful tool for social justice if developed and  applied thoughtfully. It can be used to illuminate patterns of discrimination, support transformative justice efforts, and  scale fair, inclusive systems. By intertwining AI and abolition, we can drive meaningful, transformative change."
+        }
+      ]
+    },
+    "solutions": {
+      "tagline": "Our Solutions",
+      "heading": "JusticeGPT and California Data Union",
+      "description": " Tools and resources to navigate an AI-driven future."
+    }
+  }
+}

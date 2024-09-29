@@ -1,15 +1,12 @@
-"use client"
+import { RefObject, useRef } from "react"
+import { motion, useScroll, useTransform } from "framer-motion"
 
-import { useRef } from "react"
-import { Word } from "../../components/Word"
+import en from "../../locales/en.json"
 
 export const OurMission = () => {
-  const heading =
-    "We are committed to creating an abolitionist future by promoting AI literacy and developing open-source community-led products to usher in a just and regenerative future."
-
   const headingRef = useRef<HTMLHeadingElement>(null)
 
-  const words = heading.split(" ")
+  const words = en.home.ourMission.body.split(" ")
 
   return (
     <section
@@ -18,7 +15,7 @@ export const OurMission = () => {
     >
       <div className="m-auto max-w-2xl text-center px-20">
         <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
-          Our Mission
+          {en.home.ourMission.title}
         </p>
         <h1
           ref={headingRef}
@@ -36,5 +33,31 @@ export const OurMission = () => {
         </h1>
       </div>
     </section>
+  )
+}
+
+interface Props {
+  word: string
+  words: string[]
+  index: number
+  headingRef: RefObject<HTMLHeadingElement>
+}
+
+const Word = ({ word, index, headingRef, words }: Props) => {
+  const { scrollYProgress } = useScroll({
+    target: headingRef,
+    offset: ["start center", "end center"],
+  })
+  const start = index * 0.025
+  const end = start + 0.025
+  const opacity = useTransform(scrollYProgress, [start, end], [0.25, 1])
+
+  return (
+    <>
+      <motion.span className="inline-block" style={{ opacity }}>
+        {word}
+      </motion.span>
+      {index < words.length - 1 && " "}
+    </>
   )
 }
