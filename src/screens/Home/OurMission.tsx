@@ -13,7 +13,7 @@ export const OurMission = () => {
       id="relume"
       className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28 bg-reseda-green-200"
     >
-      <div className="m-auto max-w-2xl text-center px-20">
+      <div className="m-auto max-w-2xl text-center xl:px-48">
         <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
           {en.home.ourMission.title}
         </p>
