@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@relume_io/relume-ui"
-
 import { AnimatePresence, motion } from "framer-motion"
-import Logo from "../../assets/condensed-logo.svg"
+import { useState } from "react"
 import { Link, NavLink } from "react-router-dom"
+
+import Logo from "../../assets/condensed-logo.svg"
 
 const navLinks = [
   {

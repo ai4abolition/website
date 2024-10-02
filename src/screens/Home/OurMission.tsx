@@ -1,5 +1,5 @@
-import { RefObject, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import { RefObject, useRef } from "react"
 
 import en from "../../locales/en.json"
 

@@ -1,6 +1,6 @@
-import en from "../../locales/en.json"
-import justiceGPT from "../../assets/justice-gpt.png"
 import cadu from "../../assets/cadu.png"
+import justiceGPT from "../../assets/justice-gpt.png"
+import en from "../../locales/en.json"
 
 export const Solutions = () => {
   return (

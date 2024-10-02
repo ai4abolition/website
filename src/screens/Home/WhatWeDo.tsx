@@ -1,7 +1,7 @@
 import Fist from "../../icons/fist.svg"
-import Scale from "../../icons/scale.svg"
-import People from "../../icons/people.svg"
 import Lightbulb from "../../icons/lightbulb.svg"
+import People from "../../icons/people.svg"
+import Scale from "../../icons/scale.svg"
 import en from "../../locales/en.json"
 
 export const WhatWeDo = () => {

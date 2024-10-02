@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss"
 import relumeTailwind from "@relume_io/relume-tailwind"
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [

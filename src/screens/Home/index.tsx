@@ -1,19 +1,22 @@
 import { Button } from "@relume_io/relume-ui"
+import { motion } from "framer-motion"
 import Lottie from "react-lottie"
+
 import headerLogo from "../../assets/AI4_HeaderLogo_Animation.json"
+import classroomKids from "../../assets/classroom-kids.png"
 import heroImage from "../../assets/hero-image.png"
 import en from "../../locales/en.json"
-import { motion } from "framer-motion"
-
 import { OurMission } from "./OurMission"
-import { WhatWeDo } from "./WhatWeDo"
 import { OurWhy } from "./OurWhy"
+import { Resources } from "./Resources"
 import { Solutions } from "./Solutions"
+import { Testimonials } from "./Testimonials"
+import { WhatWeDo } from "./WhatWeDo"
 
 export const Home = () => {
   return (
     <>
-      <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <section id="relume" className="px-[5%]  py-16 md:py-24 lg:py-28">
         <div className="rb-12 mb-12 grid grid-cols-1 items-start gap-x-12 gap-y-5 md:mb-18 md:grid-cols-2 lg:grid-cols-3 lg:mb-20 lg:gap-x-20 lg:gap-y-16">
           <div className="lg:col-span-2">
             <Lottie options={{ animationData: headerLogo }} />
@@ -45,10 +48,14 @@ export const Home = () => {
       <OurMission />
       <OurWhy />
       <Solutions />
-      <section
-        id="relume"
-        className="px-[5%] py-16 md:py-24 lg:py-56 bg-reseda-green-200"
-      >
+      <section className="px-[5%] py-16 md:py-24 lg:pt-32">
+        <div>
+          <img src={classroomKids} />
+        </div>
+      </section>
+      <Testimonials />
+      <Resources />
+      <section className="px-[5%] py-16 md:py-24 lg:py-56 bg-reseda-green-200">
         <div className="container">
           <div className="mx-auto w-full max-w-lg text-center">
             <motion.h1

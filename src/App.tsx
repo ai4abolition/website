@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import { Footer } from "./components/Footer"
 import { Navbar } from "./components/NavBar"
 import { Home } from "./screens/Home"
-import { Footer } from "./components/Footer"
 
 export const App = () => {
   return (

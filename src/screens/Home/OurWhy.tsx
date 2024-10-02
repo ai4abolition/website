@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react"
 import clsx from "clsx"
-import en from "../../locales/en.json"
+import { useEffect, useRef, useState } from "react"
+
 import Why1 from "../../assets/why1.png"
 import Why2 from "../../assets/why2.png"
 import Why3 from "../../assets/why3.png"
+import en from "../../locales/en.json"
 
 export const OurWhy = () => {
   const [activeSection, setActiveSection] = useState(0)

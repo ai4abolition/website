@@ -1,11 +1,13 @@
-import { FaXTwitter } from "react-icons/fa6"
 import {
   BiLogoFacebookCircle,
   BiLogoInstagram,
   BiLogoLinkedinSquare,
 } from "react-icons/bi"
-import FooterBg from "../../assets/footer-bg.png"
+import { FaXTwitter } from "react-icons/fa6"
+import { Link } from "react-router-dom"
+
 import Ai4Large from "../../assets/AI4Abolition_horizontal_black_vector.png"
+import FooterBg from "../../assets/footer-bg.png"
 
 type Links = {
   title: string
@@ -44,7 +46,7 @@ export const Footer = (props: Footer1Props) => {
         }}
         className="px-[5%] py-12 md:py-18 lg:py-20 text-timberwolf-100"
       >
-        <div className="grid grid-cols-1 gap-x-auto gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[0.75fr,1fr] lg:gap-y-4 lg:pb-48">
+        <div className="gap-x-auto gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:gap-y-4 lg:pb-48 flex justify-between">
           {columnLinks.map((column, index) => (
             <div
               key={index}
@@ -52,11 +54,14 @@ export const Footer = (props: Footer1Props) => {
             >
               <ul>
                 {column.links.map((link, linkIndex) => (
-                  <li key={linkIndex} className="py-2 text-sm">
-                    <a href={link.url} className="flex items-center gap-3">
+                  <li key={linkIndex} className="py-2 text-lg">
+                    <Link
+                      to={link.url}
+                      className="flex items-center gap-3 medium"
+                    >
                       {link.icon && <span>{link.icon}</span>}
                       <span>{link.title}</span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -73,7 +78,7 @@ export const Footer = (props: Footer1Props) => {
           </p>
           <ul className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 text-sm md:grid-flow-col md:gap-x-6 md:gap-y-0">
             {footerLinks.map((link, index) => (
-              <li key={index} className="underline">
+              <li key={index} className="underline text-sm">
                 <a href={link.url}>{link.title}</a>
               </li>
             ))}
