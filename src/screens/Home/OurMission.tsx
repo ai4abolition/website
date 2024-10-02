@@ -48,8 +48,8 @@ const Word = ({ word, index, headingRef, words }: Props) => {
     target: headingRef,
     offset: ["start center", "end center"],
   })
-  const start = index * 0.025
-  const end = start + 0.025
+  const start = index * (1 / words.length)
+  const end = start + 1 / words.length
   const opacity = useTransform(scrollYProgress, [start, end], [0.25, 1])
 
   return (
