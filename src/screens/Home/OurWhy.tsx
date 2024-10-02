@@ -12,17 +12,24 @@ export const OurWhy = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const containerStart =
+        window.scrollY +
+        (containerRef.current?.getBoundingClientRect().top ?? 0)
       const sectionHeight =
-        containerRef.current?.getBoundingClientRect().height ?? 0
-      const currentScrollPosition = window.scrollY + sectionHeight / 2
-      const currentSection = Math.floor(currentScrollPosition / sectionHeight)
+        (containerRef.current?.getBoundingClientRect().height ?? 0) /
+        contents.length
+      const relScrollPosition = window.scrollY - containerStart
+
+      let currentSection = 0
+      if (relScrollPosition > sectionHeight * 1.5) currentSection = 2
+      else if (relScrollPosition > sectionHeight * 0.5) currentSection = 1
+
       setActiveSection(currentSection)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  console.log({ activeSection })
   return (
     <>
       <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
@@ -44,22 +51,18 @@ export const OurWhy = () => {
       <section id="relume" className="px-[5%]">
         <div className="relative grid items-stretch gap-x-12 py-16 sm:gap-y-12 md:grid-cols-2 md:py-0 lg:gap-x-20">
           <div ref={containerRef} className="grid grid-cols-1 gap-12 md:block">
-            {contents.map((content, index) => (
-              <div key={index} className="max-w-md">
+            {contents.map(({ key, heading, description, image }) => (
+              <div key={key} className="max-w-md">
                 <div className="flex flex-col items-start justify-center md:h-screen">
                   <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-200">
                     {en.home.ourWhy.title}
                   </p>
                   <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                    {content.heading}
+                    {heading}
                   </h2>
-                  <p className="md:text-md">{content.description}</p>
+                  <p className="md:text-md">{description}</p>
                   <div className="mt-10 block w-full md:hidden">
-                    <img
-                      src={content.image.src}
-                      className="w-full"
-                      alt={content.image.alt}
-                    />
+                    <img src={image.src} className="w-full" alt={image.alt} />
                   </div>
                 </div>
                 <div
@@ -95,19 +98,19 @@ export const OurWhy = () => {
 
 const contents = [
   {
-    key: 1,
+    key: 0,
     heading: en.home.ourWhy.sections[0].title,
     description: en.home.ourWhy.sections[0].description,
     image: { src: Why1, alt: "Why 1" },
   },
   {
-    key: 2,
+    key: 1,
     heading: en.home.ourWhy.sections[1].title,
     description: en.home.ourWhy.sections[1].description,
     image: { src: Why2, alt: "Why 2" },
   },
   {
-    key: 3,
+    key: 2,
     heading: en.home.ourWhy.sections[2].title,
     description: en.home.ourWhy.sections[2].description,
     image: { src: Why3, alt: "Why 3" },
