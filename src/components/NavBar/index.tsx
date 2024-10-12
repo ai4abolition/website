@@ -1,11 +1,13 @@
 "use client"
 
 import { Button } from "@relume_io/relume-ui"
+import clsx from "clsx"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 
-import Logo from "../../assets/condensed-logo.svg"
+import BlackLogo from "../../assets/condensed-logo.svg?react"
+import WhiteLogo from "../../assets/condensed-logo-white.svg?react"
 
 const navLinks = [
   {
@@ -27,9 +29,16 @@ const navLinks = [
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
+  const darkMode = location.pathname.includes("about")
 
   return (
-    <nav className="grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between px-[5%] md:min-h-18">
+    <nav
+      className={clsx(
+        "grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between px-[5%] md:min-h-18",
+        darkMode && "bg-black-olive-400 text-timberwolf-100",
+      )}
+    >
       <button
         className="flex size-12 flex-col justify-center lg:hidden"
         onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -71,7 +80,7 @@ export const Navbar = () => {
             to="/"
             className="mb-8 mt-10 flex flex-shrink-0 lg:hidden"
           >
-            <img src={Logo} alt="Logo image" />
+            {darkMode ? <WhiteLogo /> : <BlackLogo />}
           </Link>
           {navLinks.map((navLink) => (
             <div key={navLink.key} className="w-full lg:w-auto ">
@@ -79,7 +88,15 @@ export const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 to={navLink.url}
                 className={({ isActive }) =>
-                  `relative block py-3 text-md lg:px-4 lg:py-2 lg:text-base  ${isActive ? "font-semibold" : "text-black-olive-300"}`
+                  clsx(
+                    "relative block py-3 text-md lg:px-4 lg:py-2 lg:text-base",
+                    {
+                      "font-semibold": isActive,
+                      "text-black-olive-300": !isActive && !darkMode,
+                      "text-timberwolf-100": darkMode && isActive,
+                      "text-black-olive-100": darkMode && !isActive,
+                    },
+                  )
                 }
               >
                 {navLink.label}
@@ -102,11 +119,18 @@ export const Navbar = () => {
         )}
       </AnimatePresence>
       <Link to="/" className="flex min-h-16 flex-shrink-0 items-center">
-        <img src={Logo} alt="Logo image" />
+        {darkMode ? <WhiteLogo /> : <BlackLogo />}
       </Link>
       <div className="flex min-h-16 items-center justify-end gap-x-4">
         <div>
-          <Button className="px-4 py-1 md:px-6 md:py-2 rounded">Donate</Button>
+          <Button
+            className={clsx(
+              "px-4 py-1 md:px-6 md:py-2 rounded",
+              darkMode && "bg-timberwolf-200 text-black",
+            )}
+          >
+            Donate
+          </Button>
         </div>
       </div>
     </nav>

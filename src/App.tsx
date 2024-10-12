@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 import { Footer } from "./components/Footer"
 import { Navbar } from "./components/NavBar"
+import { About } from "./screens/About"
 import { Home } from "./screens/Home"
 
 export const App = () => {
@@ -11,7 +12,7 @@ export const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<></>} />
+          <Route path="/about" element={<About />} />
           <Route path="/resources" element={<></>} />
         </Routes>
         <Footer />

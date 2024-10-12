@@ -1,5 +1,4 @@
 import { Button } from "@relume_io/relume-ui"
-import { motion } from "framer-motion"
 import Lottie from "react-lottie"
 
 import headerLogo from "../../assets/AI4_HeaderLogo_Animation.json"
@@ -55,37 +54,6 @@ export const Home = () => {
       </section>
       <Testimonials />
       <Resources />
-      <section className="px-[5%] py-16 md:py-24 lg:py-56 bg-reseda-green-200">
-        <div className="container">
-          <div className="mx-auto w-full max-w-lg text-center">
-            <motion.h1
-              initial={{ x: "-50%" }}
-              animate={{ x: "0%" }}
-              transition={{ type: "spring", bounce: 0 }}
-              className="font-serif text-6xl font-semibold md:text-9xl lg:text-10xl"
-            >
-              Join us in co-creating the
-            </motion.h1>
-            <motion.h1
-              initial={{ x: "50%" }}
-              animate={{ x: "0%" }}
-              transition={{ type: "spring", bounce: 0 }}
-              className="font-serif text-6xl italic font-light md:text-9xl lg:text-10xl mb-5 md:mb-6"
-            >
-              future of justice.
-            </motion.h1>
-            <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-              <Button className="rounded">Donate</Button>
-              <Button
-                variant="secondary-alt"
-                className="rounded text-black border-black"
-              >
-                Join Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
