@@ -14,6 +14,7 @@ const config: Config = {
     },
     borderRadius: {
       DEFAULT: "30px",
+      full: "9999px",
     },
     extend: {
       colors: {
