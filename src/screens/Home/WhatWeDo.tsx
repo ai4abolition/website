@@ -6,18 +6,23 @@ import en from "../../locales/en.json"
 
 export const WhatWeDo = () => {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-[112px]">
+    <section
+      id="relume"
+      className="px-[5%] xl:px-[8%]  py-16 md:py-24 lg:py-[112px]"
+    >
       <div className="flex flex-col items-start gap-y-24">
         <div className="rb-12 mb-12 grid grid-cols-1 items-start justify-between gap-5 md:mb-18 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:mb-20 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
+            <p className="mb-3 font-semibold md:mb-9 uppercase text-black-olive-300">
               {en.home.whatWeDo.title}
             </p>
-            <h2 className="font-serif text-5xl font-bold md:text-7xl lg:text-8xl">
+            <h2 className="font-serif text-5xl font-semibold md:text-7xl lg:text-7xl">
               {en.home.whatWeDo.subtitle}
             </h2>
           </div>
-          <p className="md:text-md">{en.home.whatWeDo.description}</p>
+          <p className="self-center md:text-base">
+            {en.home.whatWeDo.description}
+          </p>
         </div>
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-4 md:gap-x-8 md:gap-y-16 lg:gap-x-8">
           {sections.map((section, index) => (
@@ -29,10 +34,10 @@ export const WhatWeDo = () => {
                   alt={section.icon.alt}
                 />
               </div>
-              <h3 className="font-serif mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
+              <h3 className="font-serif mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-[32px] ">
                 {section.heading}
               </h3>
-              <p>{section.description}</p>
+              <p className="text-base">{section.description}</p>
             </div>
           ))}
         </div>

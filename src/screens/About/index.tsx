@@ -21,14 +21,14 @@ export const About = () => {
     <>
       <section
         id="relume"
-        className="px-[5%] py-16 md:py-24 lg:py-28 bg-black-olive-400 text-timberwolf-100"
+        className="px-[5%] xl:px-[8%] py-16 md:py-24 lg:py-28 bg-black-olive-400 text-timberwolf-100"
       >
         <div className="xl:px-64 lg:px-32 text-center">
-          <h1 className="mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl font-serif">
+          <h1 className="mb-5 text-3xl font-semibold md:mb-6 md:text-5xl lg:text-7xl font-serif">
             Our vision is a world in which artificial intelligence serves as a
             tool for liberation rather than oppression.
           </h1>
-          <p className="md:text-md xl:px-60 lg:px-24 md:px-24">
+          <p className="text-xl xl:px-60 lg:px-24 md:px-24">
             By transforming socio-technical systems and integrating
             justabolitionist AI into the fabric of social life, we aim to
             mitigate the harm of state violence, challenge systemic
@@ -36,17 +36,20 @@ export const About = () => {
           </p>
         </div>
       </section>
-      <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <section
+        id="relume"
+        className="px-[5%] xl:px-[8%] py-16 md:py-24 lg:py-28"
+      >
         <div className=" mb-12 grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:mb-18 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:mb-20 lg:gap-x-20">
           <div>
-            <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
+            <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300 text-lg">
               our story
             </p>
-            <h3 className="text-4xl font-semibold font-serif leading-[1.2] md:text-5xl lg:text-6xl">
+            <h3 className="text-4xl font-semibold font-serif xl:leading-[1.2] md:text-5xl lg:text-7xl">
               Tell the story of how your company came about
             </h3>
           </div>
-          <p className="md:text-md">
+          <p className="text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             varius faucibus massa sollicitudin amet augue. Nibh metus a semper
             purus mauris duis. Lorem eu neque, tristique quis duis. Nibh
@@ -66,12 +69,12 @@ export const About = () => {
         <div>
           <img
             src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-            className="w-full object-cover"
+            className="w-full object-cover rounded"
           />
         </div>
       </section>
-      <section className="px-[5%] py-12 md:py-16 lg:py-20">
-        <h1 className="mx-auto mb-6 w-full max-w-lg text-center xl:text-6xl font-serif font-semibold leading-[1.2] md:mb-8 md:text-4xl text-2xl md:leading-[1.2] xl:mb-32">
+      <section className="px-[5%] xl:px-[8%] py-12 md:py-16 lg:py-20">
+        <h1 className="mx-auto mb-6 w-full max-w-lg text-center xl:text-7xl font-serif font-semibold xl:leading-[1.2] md:mb-8 md:text-4xl text-2xl md:leading-[1.2] xl:mb-32">
           Our Partners
         </h1>
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 pb-2 pt-4 md:pt-2 xl:gap-x-96 xl:gap-y-24">
@@ -87,17 +90,17 @@ export const About = () => {
       </section>
       <Team />
       <Collaborators />
-      <section className="px-[5%] py-16 md:py-24 lg:py-28">
+      <section className="px-[5%] xl:px-[8%] py-16 md:py-24 lg:py-28">
         <div className="flex flex-col items-center">
           <div className="rb-12 mb-12 text-center md:mb-18 lg:mb-20">
             <div className="w-full max-w-lg">
               <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
                 Our Values
               </p>
-              <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              <h2 className="font-serif rb-5 mb-5 text-5xl font-semibold md:mb-6 md:text-6xl lg:text-7xl lg:leading-[1.2]">
                 Emphasize what's important to your company
               </h2>
-              <p className="md:text-md">
+              <p className="text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse varius enim in eros elementum tristique. Duis
                 cursus, mi quis viverra ornare.
@@ -117,10 +120,10 @@ export const About = () => {
                     alt={section.icon.alt}
                   />
                 </div>
-                <h3 className="font-serif mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
+                <h3 className="font-serif mb-5 text-2xl font-semibold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-3xl">
                   {section.heading}
                 </h3>
-                <p>{section.description}</p>
+                <p className="text-base">{section.description}</p>
               </div>
             ))}
           </div>

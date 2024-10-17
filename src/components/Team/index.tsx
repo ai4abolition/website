@@ -9,12 +9,12 @@ import { TeamMember } from "./TeamMember"
 export const Team = () => {
   return (
     <>
-      <section className="px-[5%] py-12 md:py-16 lg:py-20">
+      <section className="px-[5%] xl:px-[8%] py-12 md:py-16 lg:py-20">
         <div className="max-w-md mb-24">
-          <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
+          <p className="font-semibold md:mb-4 uppercase text-black-olive-300">
             Who we are
           </p>
-          <h1 className="text-6xl font-semibold font-serif leading-[1.2] md:text-8xl lg:text-10xl">
+          <h1 className="my-3 text-6xl font-semibold font-serif xl:leading-[1.2] md:text-8xl lg:text-7xl">
             Our Team
           </h1>
           <p className="text-xl">
@@ -69,7 +69,10 @@ export const Team = () => {
           </div>
         </div>
       </section>
-      <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <section
+        id="relume"
+        className="px-[5%] xl:px-[8%] py-16 md:py-24 lg:py-28"
+      >
         <div className="grid grid-cols-1 items-start justify-center gap-x-8 gap-y-12 md:grid-cols-3 md:gap-y-16 lg:grid-cols-5 lg:gap-x-12">
           {teamMembers.map((member) => (
             <TeamMember key={member.name} member={member} />

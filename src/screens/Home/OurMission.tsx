@@ -11,15 +11,15 @@ export const OurMission = () => {
   return (
     <section
       id="relume"
-      className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28 bg-reseda-green-200"
+      className="overflow-hidden px-[5%] xl:px-[8%]  py-16 md:py-24 lg:py-28 bg-reseda-green-200"
     >
       <div className="m-auto max-w-2xl text-center xl:px-48">
-        <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-300">
+        <p className="mb-5 font-semibold md:mb-10 uppercase text-black-olive-300 text-lg">
           {en.home.ourMission.title}
         </p>
         <h1
           ref={headingRef}
-          className="text-5xl font-bold md:text-7xl lg:text-8xl font-serif text-black-olive-400"
+          className="text-4xl font-bold md:text-5xl lg:text-6xl font-serif text-black-olive-400"
         >
           {words.map((word, index) => (
             <Word

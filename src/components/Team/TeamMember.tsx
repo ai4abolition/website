@@ -12,26 +12,31 @@ type TeamMember = {
 interface Props {
   member: TeamMember
   round?: boolean
+  size?: string | "full"
 }
 
-export const TeamMember = ({ member, round }: Props) => {
+export const TeamMember = ({ member, round, size = "full" }: Props) => {
   return (
     <div className="flex flex-col items-stretch text-center">
-      <div className="relative mb-5 size-full overflow-hidden md:mb-6">
+      <div className="self-center">
         <img
           src={member.image.src}
           alt={member.image.alt}
           className={clsx(
-            "size-full object-cover rounded",
+            `rounded w-${size}`,
             round ? "rounded-full" : "rounded",
           )}
         />
       </div>
-      <div className="mb-3 md:mb-4">
-        <h5 className="text-md font-semibold md:text-lg">{member.name}</h5>
-        <h6 className="md:text-md">{member.jobTitle}</h6>
+      <div className="mb-3 md:my-6">
+        <h5 className="text-md font-semibold md:text-3xl font-serif md:tracking-[-0.64px] md:leading-[1.3]">
+          {member.name}
+        </h5>
+        <h6 className="text-2xl italic font-light tracking-[-0.48px] leading-[1.5]">
+          {member.jobTitle}
+        </h6>
       </div>
-      <div className="mt-6 grid grid-flow-col grid-cols-[max-content] gap-3.5 self-center">
+      <div className="grid grid-flow-col grid-cols-[max-content] gap-3.5 self-center">
         {member.socialLinks.map((link, index) => (
           <a key={index} href={link.href}>
             {link.icon}

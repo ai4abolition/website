@@ -3,17 +3,20 @@ import { RxChevronRight } from "react-icons/rx"
 
 export const Resources = () => {
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section
+      id="relume"
+      className="px-[5%] xl:px-[8%]  py-16 md:py-24 lg:py-28"
+    >
       <div className="">
         <div className="container mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-200">
+          <p className="mb-3 font-semibold md:mb-4 uppercase text-black-olive-200 text-base">
             Resources
           </p>
-          <h2 className="rb-5 mb-5 text-5xl font-semibold font-serif md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="rb-5 mb-5 text-3xl font-semibold font-serif md:mb-6 md:text-6xl lg:text-7xl lg:leading-[120%]">
             Access Our Advocacy
             <br /> Library
           </h2>
-          <p className="md:text-md">
+          <p className="text-base">
             Empower change through knowledge and action.
           </p>
         </div>
@@ -33,18 +36,18 @@ export const Resources = () => {
                 </div>
               </a>
               <a href={post.url} className="mb-2 block max-w-full font-serif">
-                <h5 className="text-xl font-semibold md:text-2xl">
+                <h5 className="text-xl font-semibold md:text-3xl">
                   {post.title}
                 </h5>
               </a>
-              <p>{post.description}</p>
+              <p className="text-lg">{post.description}</p>
               <div className="mt-6 flex items-center">
                 <Button
                   variant="link"
                   iconRight={<RxChevronRight size="24" />}
                   title="Read More"
                   size="link"
-                  className="uppercase font-medium"
+                  className="uppercase font-medium text-base"
                 >
                   Read More
                 </Button>
@@ -55,7 +58,7 @@ export const Resources = () => {
         <div className="flex items-center justify-center">
           <Button
             variant="secondary"
-            className="mt-10 md:mt-14 lg:mt-16 uppercase bg-transparent rounded"
+            className="mt-10 md:mt-14 lg:mt-16 uppercase bg-transparent rounded text-base"
           >
             View More
           </Button>

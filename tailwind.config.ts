@@ -8,13 +8,28 @@ const config: Config = {
     "./node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    borderRadius: {
+      DEFAULT: "30px",
+      full: "9999px",
+    },
     fontFamily: {
       sans: ["Satoshi", "sans-serif"],
       serif: ["Newsreader", "serif"],
     },
-    borderRadius: {
-      DEFAULT: "30px",
-      full: "9999px",
+    fontSize: {
+      sm: ["0.875rem", { lineHeight: "150%", letterSpacing: "-0.4px" }],
+      base: ["1rem", { lineHeight: "150%", letterSpacing: "-0.4px" }],
+      lg: ["1.125rem", { lineHeight: "150%", letterSpacing: "-0.4px" }],
+      xl: ["1.25rem", { lineHeight: "150%", letterSpacing: "-0.4px" }],
+      "2xl": ["1.5rem", { lineHeight: "140%", letterSpacing: "-0.4px" }],
+      "3xl": ["1.875rem", { lineHeight: "140%", letterSpacing: "-0.4px" }],
+      "4xl": ["2.25rem", { lineHeight: "140%", letterSpacing: "-0.4px" }],
+      "5xl": ["3rem", { lineHeight: "1", letterSpacing: "-1.28px" }],
+      "6xl": ["3.5rem", { lineHeight: "1", letterSpacing: "-1.28px" }],
+      "7xl": ["4rem", { lineHeight: "1", letterSpacing: "-1.28px" }],
+      "8xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-1.28px" }],
+      "9xl": ["5rem", { lineHeight: "1", letterSpacing: "-1.28px" }],
+      "10xl": ["6rem", { lineHeight: "1", letterSpacing: "-1.28px" }],
     },
     extend: {
       colors: {

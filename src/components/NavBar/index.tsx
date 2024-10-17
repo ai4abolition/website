@@ -35,7 +35,7 @@ export const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between px-[5%] md:min-h-18",
+        "grid h-auto w-full grid-cols-[1fr_max-content_1fr] items-center justify-between px-[5%] xl:px-[8%] md:min-h-18",
         darkMode && "bg-black-olive-400 text-timberwolf-100",
       )}
     >
@@ -125,7 +125,7 @@ export const Navbar = () => {
         <div>
           <Button
             className={clsx(
-              "px-4 py-1 md:px-6 md:py-2 rounded",
+              "px-4 py-1 md:px-6 md:py-2 rounded uppercase text-base",
               darkMode && "bg-timberwolf-200 text-black",
             )}
           >
