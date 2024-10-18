@@ -11,16 +11,9 @@ export const Team = () => {
     <>
       <section className="px-[5%] xl:px-[8%] py-12 md:py-16 lg:py-20">
         <div className="max-w-md mb-24">
-          <p className="font-semibold md:mb-4 uppercase text-black-olive-300">
-            Who we are
-          </p>
           <h1 className="my-3 text-6xl font-semibold font-serif xl:leading-[1.2] md:text-8xl lg:text-7xl">
             Our Team
           </h1>
-          <p className="text-xl">
-            We are a diverse team of BIPOC, Queer, Neurodiverse, Femme,
-            Intergenerational, and First-Gen American leaders.
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           <div className="flex flex-col gap-y-8 xl:gap-y-16 self-end">

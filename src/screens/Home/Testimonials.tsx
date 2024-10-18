@@ -10,6 +10,7 @@ import clsx from "clsx"
 import React from "react"
 import { useEffect, useState } from "react"
 
+import tracy from "../../assets/headshots/tracy.jpeg"
 import { Testimonial, TestimonialCard } from "../../components/TestimonialCard"
 
 type Props = {
@@ -83,33 +84,18 @@ const Testimonial7Defaults: Testimonial7Props = {
   testimonials: [
     {
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+        "Our TikTok Trust & Safety team had the great opportunity to learn from AI4Abolition about the nuances and real-world impact of algorithmic bias. Their virtual lecture was incredibly impactful and helped bolster our team's understanding in this space. Their combination of subject-matter expertise and approachable teaching style resulted in a meaningful and memorable session. ",
       logo: {
         src: "https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg",
         alt: "Webflow logo 1",
       },
       avatar: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-        alt: "Testimonial avatar 1",
+        src: tracy,
+        alt: "Dr. Tracy Elizabeth",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
-    },
-    {
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
-      logo: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/webflow-logo.svg",
-        alt: "Webflow logo 2",
-      },
-      avatar: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-        alt: "Testimonial avatar 2",
-      },
-      name: "John Sue",
-      position: "Position",
-      companyName: "Company name",
+      name: "Dr. Tracy Elizabeth",
+      position: "Global Head of Family Safety & Developmental Health",
+      companyName: "TikTok",
     },
   ],
 }

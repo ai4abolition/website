@@ -55,7 +55,7 @@ const cards = [
       src: justiceGPT,
       alt: "Relume placeholder image 3",
     },
-    heading: "Justice GPT",
+    heading: "JusticeGPT",
     description:
       "JusticeGPT is a novel AI platform designed to facilitate transformative justice dialogues within and across criminal-legal system impacted communities. Recognizing the often-fatal consequences of involving the criminal justice system for marginalized populations, JusticeGPT offers a scalable alternative. Through this tool, communities can address harm  and resolve conflict without resorting to carceral state-sponsored systems.",
   },

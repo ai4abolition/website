@@ -59,5 +59,27 @@
       "heading": "JusticeGPT and California Data Union",
       "description": " Tools and resources to navigate an AI-driven future."
     }
+  },
+  "resources": {
+    "content": [
+      {
+        "url": "",
+        "title": "",
+        "description": "",
+        "videoUrl": "https://www.youtube.com/watch?v=aQafS4Szono"
+      },
+      {
+        "url": "",
+        "title": "",
+        "description": "",
+        "videoUrl": "https://www.youtube.com/watch?v=ol_RlxcWoy8&t=1102s"
+      },
+      {
+        "url": "",
+        "title": "",
+        "description": "",
+        "videoUrl": "https://www.youtube.com/watch?v=_zTOcebDKug&t=25s"
+      }
+    ]
   }
 }

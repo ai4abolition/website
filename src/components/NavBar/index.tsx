@@ -123,14 +123,19 @@ export const Navbar = () => {
       </Link>
       <div className="flex min-h-16 items-center justify-end gap-x-4">
         <div>
-          <Button
-            className={clsx(
-              "px-4 py-1 md:px-6 md:py-2 rounded uppercase text-base",
-              darkMode && "bg-timberwolf-200 text-black",
-            )}
+          <a
+            target="_blank"
+            href="https://www.paypal.com/donate/?hosted_button_id=W2BLJ94U8CC4C"
           >
-            Donate
-          </Button>
+            <Button
+              className={clsx(
+                "px-4 py-1 md:px-6 md:py-2 rounded uppercase text-base",
+                darkMode && "bg-timberwolf-200 text-black",
+              )}
+            >
+              Donate
+            </Button>
+          </a>
         </div>
       </div>
     </nav>
