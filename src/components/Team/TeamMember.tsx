@@ -18,14 +18,16 @@ interface Props {
 export const TeamMember = ({ member, round, size = "full" }: Props) => {
   return (
     <div className="flex flex-col items-stretch text-center">
-      <div className="self-center">
+      <div
+        className={clsx(
+          `self-center rounded w-${size}`,
+          round ? "rounded-full" : "rounded",
+        )}
+      >
         <img
           src={member.image.src}
           alt={member.image.alt}
-          className={clsx(
-            `rounded w-${size}`,
-            round ? "rounded-full" : "rounded",
-          )}
+          className={clsx(round ? "rounded-full" : "rounded")}
         />
       </div>
       <div className="mb-3 md:my-6">

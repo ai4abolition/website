@@ -4,6 +4,7 @@ import Lottie from "react-lottie"
 import headerLogo from "../../assets/AI4_HeaderLogo_Animation.json"
 import classroomKids from "../../assets/classroom-kids.png"
 import heroImage from "../../assets/hero-image.png"
+import { DonateButton } from "../../components/DonateButton"
 import en from "../../locales/en.json"
 import { OurMission } from "./OurMission"
 import { OurWhy } from "./OurWhy"
@@ -26,7 +27,7 @@ export const Home = () => {
           <div className="xl:pl-24">
             <p className="text-base">{en.home.hero.description}</p>
             <div className="mt-6 flex gap-x-4 md:mt-8">
-              <Button className="rounded uppercase text-base">Donate</Button>
+              <DonateButton />
               <Button
                 variant="secondary"
                 className="rounded uppercase text-base"

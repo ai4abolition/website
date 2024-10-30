@@ -8,6 +8,7 @@ import { Link, NavLink, useLocation } from "react-router-dom"
 
 import BlackLogo from "../../assets/condensed-logo.svg?react"
 import WhiteLogo from "../../assets/condensed-logo-white.svg?react"
+import { DonateButton } from "../DonateButton"
 
 const navLinks = [
   {
@@ -123,19 +124,10 @@ export const Navbar = () => {
       </Link>
       <div className="flex min-h-16 items-center justify-end gap-x-4">
         <div>
-          <a
-            target="_blank"
-            href="https://www.paypal.com/donate/?hosted_button_id=W2BLJ94U8CC4C"
-          >
-            <Button
-              className={clsx(
-                "px-4 py-1 md:px-6 md:py-2 rounded uppercase text-base",
-                darkMode && "bg-timberwolf-200 text-black",
-              )}
-            >
-              Donate
-            </Button>
-          </a>
+          <DonateButton
+            darkMode={darkMode}
+            buttonClasses="px-4 py-1 md:px-6 md:py-2 "
+          />
         </div>
       </div>
     </nav>

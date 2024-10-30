@@ -2,6 +2,7 @@ import { BiLogoInstagram, BiLogoLinkedinSquare } from "react-icons/bi"
 import { FaXTwitter } from "react-icons/fa6"
 
 import avriel from "../../assets/headshots/avriel.png"
+import carolyn from "../../assets/headshots/Carolyn.png"
 import jordan from "../../assets/headshots/jordan.png"
 import linh from "../../assets/headshots/linh.png"
 import { TeamMember } from "./TeamMember"
@@ -113,7 +114,7 @@ const teamMembers = [
   },
   {
     image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: carolyn,
       alt: "Relume placeholder image 1",
     },
     name: "Carolyn Wang",

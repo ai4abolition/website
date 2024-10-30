@@ -1,5 +1,5 @@
 import { Button } from "@relume_io/relume-ui"
-import { RxChevronRight } from "react-icons/rx"
+import { Link } from "react-router-dom"
 
 export const Resources = () => {
   return (
@@ -41,27 +41,18 @@ export const Resources = () => {
                 </h5>
               </a>
               <p className="text-lg">{post.description}</p>
-              <div className="mt-6 flex items-center">
-                <Button
-                  variant="link"
-                  iconRight={<RxChevronRight size="24" />}
-                  title="Read More"
-                  size="link"
-                  className="uppercase font-medium text-base"
-                >
-                  Read More
-                </Button>
-              </div>
             </div>
           ))}
         </div>
         <div className="flex items-center justify-center">
-          <Button
-            variant="secondary"
-            className="mt-10 md:mt-14 lg:mt-16 uppercase bg-transparent rounded text-base"
-          >
-            View More
-          </Button>
+          <Link to="/resources">
+            <Button
+              variant="secondary"
+              className="mt-10 md:mt-14 lg:mt-16 uppercase bg-transparent rounded text-base"
+            >
+              View More
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -70,36 +61,35 @@ export const Resources = () => {
 
 const blogPosts = [
   {
-    url: "#",
+    url: "https://www.youtube.com/live/ol_RlxcWoy8",
     image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
-      alt: "Relume placeholder image 1",
+      src: "https://i.ytimg.com/vi/ol_RlxcWoy8/hqdefault.jpg",
+      alt: "AI and Inequality",
     },
-    category: "Category",
-    title: "Blog title heading will go here",
+    title:
+      "AI and Inequality: How Machines Keep Us Poor, Sick, and Discriminated Against",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "This third program in our AI series will focus on the critical issue of inherent biases in AI technologies, especially as they are deployed in law enforcement, healthcare, government, and education. We’ll look at how these biases manifest and their profound implications.",
   },
   {
-    url: "#",
+    url: "https://www.youtube.com/live/aQafS4Szono",
     image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
-      alt: "Relume placeholder image 2",
+      src: "https://i.ytimg.com/vi/aQafS4Szono/hqdefault.jpg",
+      alt: "Mind and Machine",
     },
-    category: "Category",
-    title: "Blog title heading will go here",
+    title: "Mind and Machine: Understanding AI's Impact on Youth Mental Health",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "Join us for the first of a special ALOUD series on AI where we take a compelling look into the interaction between young people and AI systems, exploring subconscious perceptions and the significant effects of AI on youth mental health and development.",
   },
   {
-    url: "#",
+    url: "https://www.youtube.com/live/_zTOcebDKug",
     image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
-      alt: "Relume placeholder image 3",
+      src: "https://i.ytimg.com/vi/_zTOcebDKug/hqdefault.jpg",
+      alt: "AI In the Spotlight",
     },
-    category: "Category",
-    title: "Blog title heading will go here",
+    title:
+      "AI in the Spotlight: Revolutionizing Creativity and Industry in the Arts",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+      "From generating new forms of artistic expression to transforming industry practices, artificial intelligence is redefining the boundaries of creativity. This event will bring together creatives from diverse backgrounds and industry experts to discuss the opportunities and challenges presented by AI in the performing and fine arts.",
   },
 ]

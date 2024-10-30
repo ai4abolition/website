@@ -1,15 +1,11 @@
 import { Button } from "@relume_io/relume-ui"
 import { motion } from "framer-motion"
-import {
-  BiLogoFacebookCircle,
-  BiLogoInstagram,
-  BiLogoLinkedinSquare,
-} from "react-icons/bi"
-import { FaXTwitter } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 
 import Ai4Large from "../../assets/AI4Abolition_horizontal_black_vector.png"
 import FooterBg from "../../assets/footer-bg.png"
+import { DonateButton } from "../DonateButton"
+import { BiLogoInstagram, BiLogoLinkedinSquare } from "react-icons/bi"
 
 type Links = {
   title: string
@@ -61,7 +57,7 @@ export const Footer = (props: Footer1Props) => {
               future of justice.
             </motion.h1>
             <div className="pt-2 flex items-center justify-center gap-x-4 md:pt-4">
-              <Button className="rounded uppercase text-base">Donate</Button>
+              <DonateButton />
               <Button
                 variant="secondary-alt"
                 className="rounded text-black border-black uppercase text-base"
@@ -139,16 +135,11 @@ const Footer1Defaults: Footer1Props = {
       title: "Follow us",
       links: [
         {
-          title: "Facebook",
-          url: "#",
-          icon: <BiLogoFacebookCircle className="size-6" />,
-        },
-        {
           title: "Instagram",
           url: "#",
           icon: <BiLogoInstagram className="size-6" />,
         },
-        { title: "X", url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
+        // { title: "X", url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
         {
           title: "LinkedIn",
           url: "#",
@@ -158,7 +149,7 @@ const Footer1Defaults: Footer1Props = {
     },
   ],
   footerLinks: [
-    { title: "Privacy Policy", url: "#" },
-    { title: "Terms of Service", url: "#" },
+    // { title: "Privacy Policy", url: "#" },
+    // { title: "Terms of Service", url: "#" },
   ],
 }

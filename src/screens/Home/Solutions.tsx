@@ -1,5 +1,5 @@
 import cadu from "../../assets/cadu.png"
-import justiceGPT from "../../assets/justice-gpt.png"
+import REPaiR from "../../assets/justice-gpt.png"
 import en from "../../locales/en.json"
 
 export const Solutions = () => {
@@ -52,12 +52,12 @@ const cards = [
     tagline:
       "Transformative, Empowering, Responsive, Ethical, Healing, Scalable",
     image: {
-      src: justiceGPT,
+      src: REPaiR,
       alt: "Relume placeholder image 3",
     },
-    heading: "JusticeGPT",
+    heading: "REPaiR",
     description:
-      "JusticeGPT is a novel AI platform designed to facilitate transformative justice dialogues within and across criminal-legal system impacted communities. Recognizing the often-fatal consequences of involving the criminal justice system for marginalized populations, JusticeGPT offers a scalable alternative. Through this tool, communities can address harm  and resolve conflict without resorting to carceral state-sponsored systems.",
+      "REPaiR is a novel AI platform designed to facilitate transformative justice dialogues within and across criminal-legal system impacted communities. Recognizing the often-fatal consequences of involving the criminal justice system for marginalized populations, REPaiR offers a scalable alternative. Through this tool, communities can address harm  and resolve conflict without resorting to carceral state-sponsored systems.",
   },
   {
     tagline: "Empowering, Grassroots, Community-Building, Reparative",
