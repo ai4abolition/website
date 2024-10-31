@@ -126,7 +126,7 @@ export const Navbar = () => {
         <div>
           <DonateButton
             darkMode={darkMode}
-            buttonClasses="px-4 py-1 md:px-6 md:py-2 "
+            buttonClasses="px-4 py-1 md:px-6 md:py-2"
           />
         </div>
       </div>

@@ -60,9 +60,6 @@ export const OurWhy = () => {
             {contents.map(({ key, heading, description, image }) => (
               <div key={key} className="">
                 <div className="flex flex-col items-start justify-center md:h-screen">
-                  <p className="mb-5 font-semibold md:mb-8 uppercase text-black-olive-200 text-base">
-                    {en.home.ourWhy.title}
-                  </p>
                   <h2 className="rb-5 mb-5 text-5xl font-semibold font-serif md:mb-6 md:text-7xl lg:text-6xl">
                     {heading}
                   </h2>

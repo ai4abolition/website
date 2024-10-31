@@ -1,11 +1,11 @@
 import { Button } from "@relume_io/relume-ui"
 import { motion } from "framer-motion"
+import { BiLogoInstagram, BiLogoLinkedinSquare } from "react-icons/bi"
 import { Link } from "react-router-dom"
 
 import Ai4Large from "../../assets/AI4Abolition_horizontal_black_vector.png"
 import FooterBg from "../../assets/footer-bg.png"
 import { DonateButton } from "../DonateButton"
-import { BiLogoInstagram, BiLogoLinkedinSquare } from "react-icons/bi"
 
 type Links = {
   title: string
@@ -136,10 +136,9 @@ const Footer1Defaults: Footer1Props = {
       links: [
         {
           title: "Instagram",
-          url: "#",
+          url: "https://www.instagram.com/ai4abolition/",
           icon: <BiLogoInstagram className="size-6" />,
         },
-        // { title: "X", url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
         {
           title: "LinkedIn",
           url: "#",
