@@ -1,10 +1,11 @@
-import { BiLogoInstagram, BiLogoLinkedinSquare } from "react-icons/bi"
-import { FaXTwitter } from "react-icons/fa6"
+import { BiLogoLinkedinSquare } from "react-icons/bi"
 
 import avriel from "../../assets/headshots/avriel.png"
 import carolyn from "../../assets/headshots/Carolyn.png"
 import jordan from "../../assets/headshots/jordan.png"
 import linh from "../../assets/headshots/linh.png"
+import sara from "../../assets/headshots/sara.jpg"
+import taylor from "../../assets/headshots/taylor.jpeg"
 import { TeamMember } from "./TeamMember"
 
 export const Team = () => {
@@ -44,7 +45,7 @@ export const Team = () => {
             </p>
           </div>
           <div className="flex flex-col text-center">
-            <img className="pt-32" src={avriel} alt="Avriel Epps" />
+            <img className="pt-32 rounded" src={avriel} alt="Avriel Epps" />
             <h5 className="font-serif font-semibold text-4xl mt-8 mb-4">
               Avriel Epps, Ph.D.
             </h5>
@@ -53,7 +54,7 @@ export const Team = () => {
             </p>
           </div>
           <div className="flex flex-col text-center">
-            <img src={jordan} alt="Jordan Epps" />
+            <img className="rounded" src={jordan} alt="Jordan Epps" />
             <h5 className="font-serif font-semibold text-4xl mt-8 mb-4">
               Jordan Epps
             </h5>
@@ -69,7 +70,12 @@ export const Team = () => {
       >
         <div className="grid grid-cols-1 items-start justify-center gap-x-8 gap-y-12 md:grid-cols-3 md:gap-y-16 lg:grid-cols-5 lg:gap-x-12">
           {teamMembers.map((member) => (
-            <TeamMember key={member.name} member={member} />
+            <TeamMember
+              key={member.name}
+              member={member}
+              height="64"
+              width="48"
+            />
           ))}
         </div>
       </section>
@@ -84,20 +90,20 @@ const teamMembers = [
     jobTitle: "Executive Assistant",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
-      { href: "#", icon: <BiLogoInstagram className="size-6" /> },
     ],
   },
   {
     image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: taylor,
       alt: "Relume placeholder image 1",
     },
     name: "Taylor Ferrari",
     jobTitle: "UX Researcher",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
+      {
+        href: "https://www.linkedin.com/in/taylorferrari/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
@@ -108,8 +114,10 @@ const teamMembers = [
     name: "Ra Ames",
     jobTitle: "UX Designer",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
+      {
+        href: "https://www.linkedin.com/in/raames1/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
@@ -121,19 +129,17 @@ const teamMembers = [
     jobTitle: "Data Science Intern",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
     ],
   },
   {
     image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+      src: sara,
       alt: "Relume placeholder image 1",
     },
     name: "Sara Jin Li",
     jobTitle: "Consultant",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
     ],
   },
 ]

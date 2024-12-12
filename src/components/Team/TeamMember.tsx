@@ -12,22 +12,33 @@ type TeamMember = {
 interface Props {
   member: TeamMember
   round?: boolean
-  size?: string | "full"
+  width?: string | "full"
+  height?: string | "full"
 }
 
-export const TeamMember = ({ member, round, size = "full" }: Props) => {
+export const TeamMember = ({
+  member,
+  round,
+  width = "full",
+  height = "full",
+}: Props) => {
   return (
     <div className="flex flex-col items-stretch text-center">
       <div
-        className={clsx(
-          `self-center rounded w-${size}`,
-          round ? "rounded-full" : "rounded",
-        )}
+        style={{
+          overflow: "hidden",
+          backgroundImage: `url(${member.image.src})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+        className={clsx(`self-center`, round ? "rounded-full" : "rounded")}
       >
-        <img
-          src={member.image.src}
-          alt={member.image.alt}
-          className={clsx(round ? "rounded-full" : "rounded")}
+        <div
+          className={clsx(
+            round ? "rounded-full" : "rounded",
+            `w-${width} h-${height}`,
+          )}
         />
       </div>
       <div className="mb-3 md:my-6">
@@ -40,7 +51,7 @@ export const TeamMember = ({ member, round, size = "full" }: Props) => {
       </div>
       <div className="grid grid-flow-col grid-cols-[max-content] gap-3.5 self-center">
         {member.socialLinks.map((link, index) => (
-          <a key={index} href={link.href}>
+          <a key={index} href={link.href} target="_blank">
             {link.icon}
           </a>
         ))}

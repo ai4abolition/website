@@ -1,4 +1,4 @@
-import { BiLogoDribbble, BiLogoLinkedinSquare } from "react-icons/bi"
+import { BiLogoLinkedinSquare } from "react-icons/bi"
 
 import andy from "../../assets/headshots/Andy.png"
 import anika from "../../assets/headshots/Anika.png"
@@ -43,7 +43,13 @@ export const Collaborators = () => {
       </div>
       <div className="grid grid-cols-1 items-start justify-center gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-24 lg:grid-cols-4 ">
         {collaborators.map((member) => (
-          <TeamMember key={member.name} member={member} round size="48" />
+          <TeamMember
+            key={member.name}
+            member={member}
+            round
+            width="48"
+            height="48"
+          />
         ))}
       </div>
     </section>
@@ -57,7 +63,6 @@ const collaborators = [
     jobTitle: "UCLA Professor, Founder of Center for Race & Digital Justice",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -66,7 +71,6 @@ const collaborators = [
     jobTitle: "Artist & Abolitionist, CoFounder Black Lives Matter",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -75,7 +79,6 @@ const collaborators = [
     jobTitle: "Former Global Strategy Lead @ Google Responsible AI",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -84,7 +87,6 @@ const collaborators = [
     jobTitle: "Co-Founder of Ling Ventures and Amplify",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -93,7 +95,6 @@ const collaborators = [
     jobTitle: "Neuroscientist, President of District Commons",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -102,7 +103,6 @@ const collaborators = [
     jobTitle: "Principal at SidePorch",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -111,7 +111,6 @@ const collaborators = [
     jobTitle: "CEO of MMG Earth",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
   {
@@ -120,7 +119,6 @@ const collaborators = [
     jobTitle: "Senior Fellow at Columbia University Tow Center",
     socialLinks: [
       { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-      { href: "#", icon: <BiLogoDribbble className="size-6" /> },
     ],
   },
 ]

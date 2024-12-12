@@ -1,4 +1,6 @@
+import hero from "../../assets/about-us-hero.png"
 import abolition from "../../assets/partner-logos/abolition-dream-lab.png"
+import altJ from "../../assets/partner-logos/alt-j.png"
 import dataForBlackLives from "../../assets/partner-logos/data-for-black-lives.png"
 import libraryFoundation from "../../assets/partner-logos/library-foundation.png"
 import newMediaVentures from "../../assets/partner-logos/new-media-ventures.png"
@@ -6,14 +8,19 @@ import rodenberry from "../../assets/partner-logos/rodenberry.png"
 import ucla from "../../assets/partner-logos/ucla-center-on-race.png"
 import { Collaborators } from "../../components/Collaborators"
 import { Team } from "../../components/Team"
+import Brain from "../../icons/brain.svg"
+import Chat from "../../icons/chat.svg"
+import Handshake from "../../icons/handshake.svg"
+import Person from "../../icons/person.svg"
 
 const logos = [
+  { src: libraryFoundation, alt: "Library Foundation of Los Angeles" },
   { src: ucla, alt: "UCLA Center on Race and Digital Justice" },
+  { src: altJ, alt: "Alternative Justice" },
   { src: abolition, alt: "Abolition Dream Lab" },
   { src: dataForBlackLives, alt: "Data for Black Lives" },
   { src: newMediaVentures, alt: "New Media Ventures" },
   { src: rodenberry, alt: "Roddenberry Foundation" },
-  { src: libraryFoundation, alt: "Library Foundation of Los Angeles" },
 ]
 
 export const About = () => {
@@ -64,10 +71,7 @@ export const About = () => {
           </p>
         </div>
         <div>
-          <img
-            src="https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg"
-            className="w-full object-cover rounded"
-          />
+          <img src={hero} className="w-full object-cover rounded" />
         </div>
       </section>
       <section className="px-[5%] xl:px-[8%] py-12 md:py-16 lg:py-20">
@@ -80,7 +84,7 @@ export const About = () => {
               key={index}
               src={logo.src}
               alt={logo.alt}
-              className="max-h-12 md:max-h-14"
+              className="max-h-12 md:max-h-16"
             />
           ))}
         </div>
@@ -129,37 +133,25 @@ export const About = () => {
 
 const sections = [
   {
-    icon: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-      alt: "Relume logo 1",
-    },
+    icon: { src: Chat, alt: "Chat Icon" },
     heading: "Participatory AI Development",
     description:
       "Communities affected by AI should have a say in how these technologies are developed and used. This helps ensure that AI is developed with an understanding of the unique contexts and needs of different communities.",
   },
   {
-    icon: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-      alt: "Relume logo 2",
-    },
+    icon: { src: Handshake, alt: "Handshake Icon" },
     heading: "Collaboration and Mutual Aid",
     description:
       "Foster collaboration between individuals, communities, and organizations in the development and use of AI. Promote the idea that mutual aid, rather than competition, is the key to a healthier society.",
   },
   {
-    icon: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-      alt: "Relume logo 3",
-    },
+    icon: { src: Person, alt: "Person Icon" },
     heading: "Respecting and Enhancing Human Autonomy",
     description:
       "AI should be designed to respect and enhance human autonomy, rather than diminish it. This means avoiding over-reliance on AI in decision-making processes, especially in contexts that directly impact individuals' lives and well-being.",
   },
   {
-    icon: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
-      alt: "Relume logo 3",
-    },
+    icon: { src: Brain, alt: "Brain Icon" },
     heading: "Abolition as Constant Praxis",
     description:
       "Always strive for abolitionist outcomes, understanding that this is a continuous process of learning, unlearning, and transformative action. See each challenge as an opportunity to advance towards a more equitable, just, and compassionate society.",
