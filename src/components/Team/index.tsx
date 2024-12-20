@@ -73,8 +73,7 @@ export const Team = () => {
             <TeamMember
               key={member.name}
               member={member}
-              height="64"
-              width="48"
+              imgClassName="h-64 w-48"
             />
           ))}
         </div>

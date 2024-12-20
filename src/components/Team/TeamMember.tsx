@@ -12,16 +12,10 @@ type TeamMember = {
 interface Props {
   member: TeamMember
   round?: boolean
-  width?: string | "full"
-  height?: string | "full"
+  imgClassName?: string
 }
 
-export const TeamMember = ({
-  member,
-  round,
-  width = "full",
-  height = "full",
-}: Props) => {
+export const TeamMember = ({ member, round, imgClassName }: Props) => {
   return (
     <div className="flex flex-col items-stretch text-center">
       <div
@@ -37,7 +31,7 @@ export const TeamMember = ({
         <div
           className={clsx(
             round ? "rounded-full" : "rounded",
-            `w-${width} h-${height}`,
+            imgClassName ?? "h-48 w-48",
           )}
         />
       </div>

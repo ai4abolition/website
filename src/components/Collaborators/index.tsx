@@ -43,13 +43,7 @@ export const Collaborators = () => {
       </div>
       <div className="grid grid-cols-1 items-start justify-center gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-24 lg:grid-cols-4 ">
         {collaborators.map((member) => (
-          <TeamMember
-            key={member.name}
-            member={member}
-            round
-            width="48"
-            height="48"
-          />
+          <TeamMember key={member.name} member={member} round />
         ))}
       </div>
     </section>
