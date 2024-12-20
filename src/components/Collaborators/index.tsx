@@ -62,7 +62,10 @@ const collaborators = [
     name: "Safiya Noble, Ph.D.",
     jobTitle: "UCLA Professor, Founder of Center for Race & Digital Justice",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/safiyanoble/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
@@ -70,7 +73,7 @@ const collaborators = [
     name: "Patrisse Cullors",
     jobTitle: "Artist & Abolitionist, CoFounder Black Lives Matter",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      // { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
     ],
   },
   {
@@ -78,15 +81,21 @@ const collaborators = [
     name: "X. Eyee",
     jobTitle: "Former Global Strategy Lead @ Google Responsible AI",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/techwithx/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
     image: { src: greg, alt: "Greg Gunn head shot" },
     name: "Greg Gunn",
-    jobTitle: "Co-Founder of Ling Ventures and Amplify",
+    jobTitle: "Co-Founder of Lingo Ventures and Amplify",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/greg-gunn-1061388/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
@@ -94,15 +103,21 @@ const collaborators = [
     name: "Zarinah Agnew",
     jobTitle: "Neuroscientist, President of District Commons",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/zarinah-agnew/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
-    image: { src: andy, alt: "Andy Reimer head shot" },
-    name: "Andy Reimer",
+    image: { src: andy, alt: "Andy Riemer head shot" },
+    name: "Andy Riemer",
     jobTitle: "Principal at SidePorch",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/andy-riemer/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
@@ -110,7 +125,10 @@ const collaborators = [
     name: "B. Mckensie Mack",
     jobTitle: "CEO of MMG Earth",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/mckensiemack/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
   {
@@ -118,7 +136,10 @@ const collaborators = [
     name: "Anika Collier Navaroli",
     jobTitle: "Senior Fellow at Columbia University Tow Center",
     socialLinks: [
-      { href: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+      {
+        href: "https://www.linkedin.com/in/anikacolliernavaroli/",
+        icon: <BiLogoLinkedinSquare className="size-6" />,
+      },
     ],
   },
 ]

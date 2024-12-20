@@ -50,24 +50,21 @@ export const About = () => {
               our story
             </p>
             <h3 className="text-4xl font-semibold font-serif xl:leading-[1.2] md:text-5xl lg:text-7xl">
-              Tell the story of how your company came about
+              Reimagining AI for Liberation
             </h3>
           </div>
           <p className="text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-            varius faucibus massa sollicitudin amet augue. Nibh metus a semper
-            purus mauris duis. Lorem eu neque, tristique quis duis. Nibh
-            scelerisque ac adipiscing velit non nulla in amet pellentesque. Sit
-            turpis pretium eget maecenas. Vestibulum dolor mattis consectetur
-            eget commodo vitae. Amet pellentesque sit pulvinar lorem mi a,
-            euismod risus rhoncus. Elementum ullamcorper nec, habitasse
-            vulputate. Eget dictum quis est sed egestas tellus, a lectus. Quam
-            ullamcorper in fringilla arcu aliquet fames arcu.Lacinia eget
-            faucibus urna, nam risus nec elementum cras porta. Sed elementum,
-            sed dolor purus dolor dui. Ut dictum nulla pulvinar vulputate sit
-            sagittis in eleifend dignissim. Natoque mauris cras molestie velit.
-            Maecenas eget adipiscing quisque viverra lectus arcu, tincidunt
-            ultrices pellentesque.
+            AI4Abolition was founded out of a deep commitment to dismantling
+            harmful algorithmic systems and reimagining technology as a force
+            for liberation. After nearly a decade of diagnosing the ways AI
+            reinforces oppression in housing, healthcare, education, and the
+            criminal legal system, our co-founders realized that addressing the
+            systemic flaws in AI wasn't enough. While it's crucial to expose the
+            harm these systems cause—especially to Black, brown, poor, and other
+            marginalized communities—it's just as vital to imagine and build
+            alternatives. We can't simply dismantle oppressive technologies
+            without dreaming up systems that foster justice, equity, and human
+            flourishing.
           </p>
         </div>
         <div>

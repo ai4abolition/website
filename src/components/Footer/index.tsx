@@ -1,4 +1,3 @@
-import { Button } from "@relume_io/relume-ui"
 import { motion } from "framer-motion"
 import { BiLogoInstagram, BiLogoLinkedinSquare } from "react-icons/bi"
 import { Link } from "react-router-dom"
@@ -23,48 +22,61 @@ type FooterLink = {
   url: string
 }
 
-type Props = {
-  columnLinks: ColumnLinks[]
-  footerLinks: FooterLink[]
-}
-
-type Footer1Props = React.ComponentPropsWithoutRef<"section"> & Partial<Props>
-
-export const Footer = (props: Footer1Props) => {
-  const { columnLinks, footerLinks } = {
-    ...Footer1Defaults,
-    ...props,
-  } as Props
+export const Footer = () => {
+  const columnLinks: ColumnLinks[] = [
+    {
+      title: "Column One",
+      links: [
+        { title: "Explore", url: "/" },
+        { title: "About", url: "about" },
+        { title: "Advocacy Library", url: "resources" },
+      ],
+    },
+    {
+      title: "Follow us",
+      links: [
+        {
+          title: "Instagram",
+          url: "https://www.instagram.com/ai4abolition/",
+          icon: <BiLogoInstagram className="size-6" />,
+        },
+        {
+          title: "LinkedIn",
+          url: "https://www.linkedin.com/company/ai4abolition/",
+          icon: <BiLogoLinkedinSquare className="size-6" />,
+        },
+      ],
+    },
+  ]
+  const footerLinks: FooterLink[] = []
   return (
     <>
       <section className="px-[5%] xl:px-[8%] py-16 md:py-24 lg:py-48 bg-reseda-green-200">
-        <div className="container">
-          <div className="mx-auto w-full max-w-lg text-center">
-            <motion.h1
-              initial={{ x: "-50%" }}
-              animate={{ x: "0%" }}
-              transition={{ type: "spring", bounce: 0 }}
-              className="font-serif text-6xl font-semibold md:text-9xl lg:text-7xl lg:leading-[120%]"
+        <div className="mx-auto w-full text-center">
+          <motion.h1
+            initial={{ x: "-50%" }}
+            animate={{ x: "0%" }}
+            transition={{ type: "spring", bounce: 0 }}
+            className="font-serif text-3xl font-semibold md:text-4xl lg:text-5xl lg:leading-[120%]"
+          >
+            Join us in reshaping the future of technology
+          </motion.h1>
+          <motion.h1
+            initial={{ x: "50%" }}
+            animate={{ x: "0%" }}
+            transition={{ type: "spring", bounce: 0 }}
+            className="font-serif text-3xl italic font-light md:text-4xl lg:text-5xl mb-5 md:mb-6  lg:leading-[120%]"
+          >
+            one that uplifts, liberates, and centers those at the margins.
+          </motion.h1>
+          <div className="pt-2 flex items-center justify-center gap-x-4 md:pt-4">
+            <DonateButton />
+            {/* <Button
+              variant="secondary-alt"
+              className="rounded text-black border-black uppercase text-base"
             >
-              Join us in co-creating the
-            </motion.h1>
-            <motion.h1
-              initial={{ x: "50%" }}
-              animate={{ x: "0%" }}
-              transition={{ type: "spring", bounce: 0 }}
-              className="font-serif text-6xl italic font-light md:text-9xl lg:text-7xl mb-5 md:mb-6  lg:leading-[120%]"
-            >
-              future of justice.
-            </motion.h1>
-            <div className="pt-2 flex items-center justify-center gap-x-4 md:pt-4">
-              <DonateButton />
-              <Button
-                variant="secondary-alt"
-                className="rounded text-black border-black uppercase text-base"
-              >
-                Join Us
-              </Button>
-            </div>
+              Join Us
+            </Button> */}
           </div>
         </div>
       </section>
@@ -119,36 +131,4 @@ export const Footer = (props: Footer1Props) => {
       </div>
     </>
   )
-}
-
-const Footer1Defaults: Footer1Props = {
-  columnLinks: [
-    {
-      title: "Column One",
-      links: [
-        { title: "Explore", url: "/" },
-        { title: "About", url: "about" },
-        { title: "Advocacy Library", url: "resources" },
-      ],
-    },
-    {
-      title: "Follow us",
-      links: [
-        {
-          title: "Instagram",
-          url: "https://www.instagram.com/ai4abolition/",
-          icon: <BiLogoInstagram className="size-6" />,
-        },
-        {
-          title: "LinkedIn",
-          url: "#",
-          icon: <BiLogoLinkedinSquare className="size-6" />,
-        },
-      ],
-    },
-  ],
-  footerLinks: [
-    // { title: "Privacy Policy", url: "#" },
-    // { title: "Terms of Service", url: "#" },
-  ],
 }

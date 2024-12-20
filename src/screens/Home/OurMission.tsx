@@ -1,10 +1,14 @@
-import { motion, useScroll, useTransform } from "framer-motion"
-import { RefObject, useRef } from "react"
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 import en from "../../locales/en.json"
 
 export const OurMission = () => {
   const headingRef = useRef<HTMLHeadingElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: headingRef,
+    offset: ["start center", "end center"],
+  })
 
   const words = en.home.ourMission.body.split(" ")
 
@@ -27,7 +31,7 @@ export const OurMission = () => {
               word={word}
               index={index}
               words={words}
-              headingRef={headingRef}
+              scrollProgress={scrollYProgress}
             />
           ))}
         </h1>
@@ -40,17 +44,13 @@ interface Props {
   word: string
   words: string[]
   index: number
-  headingRef: RefObject<HTMLHeadingElement>
+  scrollProgress: MotionValue<number>
 }
 
-const Word = ({ word, index, headingRef, words }: Props) => {
-  const { scrollYProgress } = useScroll({
-    target: headingRef,
-    offset: ["start center", "end center"],
-  })
+const Word = ({ word, index, scrollProgress, words }: Props) => {
   const start = index * (1 / words.length)
   const end = start + 1 / words.length
-  const opacity = useTransform(scrollYProgress, [start, end], [0.25, 1])
+  const opacity = useTransform(scrollProgress, [start, end], [0.25, 1])
 
   return (
     <>
