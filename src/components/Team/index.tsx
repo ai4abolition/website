@@ -4,6 +4,7 @@ import avriel from "../../assets/headshots/avriel.png"
 import carolyn from "../../assets/headshots/Carolyn.png"
 import jordan from "../../assets/headshots/jordan.png"
 import linh from "../../assets/headshots/linh.png"
+import ra from "../../assets/headshots/ra.png"
 import sara from "../../assets/headshots/sara.jpg"
 import taylor from "../../assets/headshots/taylor.jpeg"
 import { TeamMember } from "./TeamMember"
@@ -92,10 +93,7 @@ const teamMembers = [
     ],
   },
   {
-    image: {
-      src: taylor,
-      alt: "Relume placeholder image 1",
-    },
+    image: { src: taylor, alt: "Relume placeholder image 1" },
     name: "Taylor Ferrari",
     jobTitle: "UX Researcher",
     socialLinks: [
@@ -106,10 +104,7 @@ const teamMembers = [
     ],
   },
   {
-    image: {
-      src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
-      alt: "Relume placeholder image 1",
-    },
+    image: { src: ra, alt: "Relume placeholder image 1" },
     name: "Ra Ames",
     jobTitle: "UX Designer",
     socialLinks: [
@@ -120,10 +115,7 @@ const teamMembers = [
     ],
   },
   {
-    image: {
-      src: carolyn,
-      alt: "Relume placeholder image 1",
-    },
+    image: { src: carolyn, alt: "Relume placeholder image 1" },
     name: "Carolyn Wang",
     jobTitle: "Data Science Intern",
     socialLinks: [
@@ -131,10 +123,7 @@ const teamMembers = [
     ],
   },
   {
-    image: {
-      src: sara,
-      alt: "Relume placeholder image 1",
-    },
+    image: { src: sara, alt: "Relume placeholder image 1" },
     name: "Sara Jin Li",
     jobTitle: "Consultant",
     socialLinks: [
